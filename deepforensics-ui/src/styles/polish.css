@@ -3,33 +3,6 @@
    Loaded after index.css so these rules win.
    ============================================================ */
 
-/* Refined color tokens + typography */
-:root {
-  --bg-0: #060913;
-  --bg-1: #0d1424;
-  --bg-2: #131b30;
-  --bg-3: #1d2742;
-  --border: #1e2a4a;
-  --border-strong: #2a3a63;
-  --text-1: #f1f5f9;
-  --primary: #4f46e5;
-  --primary-2: #6366f1;
-  --accent: #06b6d4;
-  --accent-2: #22d3ee;
-  --accent-3: #38bdf8;
-  --danger-2: #f87171;
-  --radius: 14px;
-  --radius-sm: 10px;
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.25);
-  --shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.5);
-  --glow-primary: 0 0 24px rgba(79, 70, 229, 0.3);
-  --glow-accent: 0 0 24px rgba(6, 182, 212, 0.25);
-  --transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
-
 body {
   font-feature-settings: 'cv11', 'ss01';
   letter-spacing: -0.005em;
