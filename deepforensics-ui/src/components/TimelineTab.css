@@ -1,0 +1,109 @@
+.tl-tab {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Canvas wrapper */
+.tl-card { padding: 16px 20px; }
+.tl-canvas-wrap {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 4px;
+}
+
+/* Hover tooltip */
+.tl-tooltip {
+  position: absolute;
+  background: var(--bg-1);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  pointer-events: none;
+  z-index: 10;
+  min-width: 170px;
+  box-shadow: var(--shadow-lg);
+  animation: fadeIn 0.1s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(3px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.tl-tt-time {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--accent-2);
+  margin-bottom: 3px;
+}
+.tl-tt-type {
+  font-size: 13px;
+  color: var(--text-1);
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+.tl-tt-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Legend */
+.tl-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 12px;
+  font-size: 12px;
+  color: var(--text-2);
+}
+.tl-leg-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.tl-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+/* Stats row */
+.tl-stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+@media (max-width: 700px) {
+  .tl-stats-row { grid-template-columns: repeat(2, 1fr); }
+}
+
+.tl-stat {
+  padding: 16px;
+}
+.tl-stat-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-2);
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+.tl-stat-val {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  line-height: 1;
+  color: var(--text-1);
+}
+.tl-accent { color: var(--accent-2); }
+.tl-danger  { color: var(--danger-2); }
+
+/* Event table */
+.tl-table-wrap {
+  overflow-x: auto;
+  margin-top: 4px;
+}

@@ -1,0 +1,198 @@
+/* ============================================================
+   BASE LAYER — variables, resets, and foundational component styles
+   Loaded first; polish.css layers enhancements on top.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  /* Backgrounds */
+  --bg-0: #060913;
+  --bg-1: #0d1424;
+  --bg-2: #131b30;
+  --bg-3: #1d2742;
+
+  /* Borders */
+  --border: #1e2a4a;
+  --border-strong: #2a3a63;
+
+  /* Text */
+  --text-1: #f1f5f9;
+  --text-2: #94a3b8;
+  --text-3: #475569;
+
+  /* Brand */
+  --primary: #4f46e5;
+  --primary-2: #6366f1;
+  --accent: #06b6d4;
+  --accent-2: #22d3ee;
+  --accent-3: #38bdf8;
+
+  /* Status */
+  --safe: #10b981;
+  --warn: #f59e0b;
+  --danger: #ef4444;
+  --danger-2: #f87171;
+
+  /* Shape */
+  --radius: 14px;
+  --radius-sm: 10px;
+
+  /* Shadows & glows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.25);
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.5);
+  --glow-primary: 0 0 24px rgba(79, 70, 229, 0.3);
+  --glow-accent: 0 0 24px rgba(6, 182, 212, 0.25);
+
+  --transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--bg-0);
+  color: var(--text-1);
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Links */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--text-1);
+}
+
+/* Page layout */
+.page {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+/* Card base */
+.card {
+  background: var(--bg-1);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+
+/* Button base */
+button {
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px;
+  border-radius: var(--radius-sm);
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  color: var(--text-1);
+  background: transparent;
+  line-height: 1;
+}
+
+button.primary {
+  color: #fff;
+}
+
+button.ghost {
+  background: var(--bg-2);
+  border-color: var(--border);
+  color: var(--text-2);
+}
+
+button.ghost:hover:not(:disabled) {
+  border-color: var(--border-strong);
+  color: var(--text-1);
+}
+
+/* Input base */
+input[type='text'],
+input[type='search'],
+input[type='email'],
+input[type='number'],
+select,
+textarea {
+  font-family: inherit;
+  font-size: 14px;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-1);
+  padding: 8px 12px;
+  width: 100%;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-3);
+}
+
+/* Badge base */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.badge.info {
+  background: rgba(6, 182, 212, 0.12);
+  color: var(--accent-2);
+  border: 1px solid rgba(6, 182, 212, 0.2);
+}
+
+.badge.success {
+  background: rgba(16, 185, 129, 0.12);
+  color: var(--safe);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.badge.danger {
+  background: rgba(239, 68, 68, 0.12);
+  color: var(--danger-2);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+/* Severity variants used by anomaly tables and phase/video badges */
+.badge.high {
+  background: rgba(239, 68, 68, 0.12);
+  color: var(--danger-2);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.badge.med {
+  background: rgba(245, 158, 11, 0.12);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.badge.low {
+  background: rgba(16, 185, 129, 0.12);
+  color: var(--safe);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+/* Utility */
+.muted { color: var(--text-2); }
+.tiny  { font-size: 12px; }

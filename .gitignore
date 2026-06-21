@@ -1,0 +1,26 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+backend/uploads/
+backend/*.db
+backend/*.sqlite
+*.egg-info/
+dist/
+build/
+
+# Node
+deepforensics-ui/node_modules/
+deepforensics-ui/dist/
+
+# Env
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp

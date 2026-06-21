@@ -1,0 +1,28 @@
+.gauge {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  margin: 0 auto;
+}
+.gauge-center {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+.gauge-value {
+  font-size: 32px;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+}
+.gauge.high .gauge-value { color: var(--danger); }
+.gauge.med .gauge-value { color: var(--warn); }
+.gauge.low .gauge-value { color: var(--safe); }
+.gauge-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: var(--text-2);
+  letter-spacing: 0.1em;
+  margin-top: 4px;
+}
